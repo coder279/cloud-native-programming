@@ -11,7 +11,7 @@ func main() {
 	for{
 		go func() {
 			for _ = range ticker.C {
-				queue <- 1
+				queue <- 2
 				fmt.Println("生产了一条数据")
 			}
 		}()
