@@ -1,0 +1,6 @@
+FROM gcc:9.4
+COPY hello.c /src/hello.c
+WORKDIR /src
+RUN gcc --static -o hello hello.c
+ENTRYPOINT ["/src/hello"]
+CMD []

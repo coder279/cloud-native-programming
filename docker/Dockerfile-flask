@@ -1,0 +1,11 @@
+FROM python:3.9.5-alpine3.13
+
+COPY app.py /src/
+
+RUN pip install flask
+
+WORKDIR /src
+ENV FLASK=app.py
+
+EXPOSE 5000
+CMD ["flask","run"]
